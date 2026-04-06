@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Airplane Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>PAPER AIRPLANE GUIDE</h1>
+        <nav>
+            <ul>
+                <li><a href="#step1">Steps</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#language" id="language-switch">Switch to Indonesian</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="step1">
+            <h2>Steps to Fold a Paper Airplane</h2>
+            <ol>
+                <li>Take a letter-sized paper.</li>
+                <li>Fold it in half lengthwise, then unfold it.</li>
+                <li>Fold the top corners down to the center crease.</li>
+                <li>Fold the triangle down created by the corners.</li>
+                <li>Fold the wings down on both sides.</li>
+                <li>Your paper airplane is ready to fly!</li>
+            </ol>
+        </section>
+        <section id="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery">
+                <img src="photo1.jpg" alt="Paper airplane 1" />
+                <img src="photo2.jpg" alt="Paper airplane 2" />
+                <img src="photo3.jpg" alt="Paper airplane 3" />
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Paper Airplane Guide. All rights reserved.</p>
+    </footer>
+    <script>
+        const languageSwitch = document.getElementById('language-switch');
+        let isIndonesian = false;
+        languageSwitch.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (isIndonesian) {
+                document.title = 'Paper Airplane Guide';
+                document.querySelector('h1').textContent = 'PAPER AIRPLANE GUIDE';
+                document.querySelector('h2').textContent = 'Steps to Fold a Paper Airplane';
+                languageSwitch.textContent = 'Switch to Indonesian';
+                isIndonesian = false;
+            } else {
+                document.title = 'Panduan Pesawat Kertas';
+                document.querySelector('h1').textContent = 'PANDUAN PESAWAT KERTAS';
+                document.querySelector('h2').textContent = 'Langkah-langkah Melipat Pesawat Kertas';
+                languageSwitch.textContent = 'Switch to English';
+                isIndonesian = true;
+            }
+        });
+    </script>
+</body>
+</html>
